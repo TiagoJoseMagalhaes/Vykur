@@ -1,12 +1,14 @@
-
 use winit::window::{Window, WindowBuilder};
 use winit::dpi::LogicalSize;
 use winit::event_loop::{ControlFlow, EventLoop};
 use winit::event::*;
 
+mod Vulkan;
+use crate::Vulkan::Vulkan::something;
+
 fn main() {
     pretty_env_logger::init();
-
+    something();
     let event_loop = EventLoop::new();
     let window = WindowBuilder::new()
         .with_title("Vykur")
